@@ -9,7 +9,9 @@ export const FriendCard = styled.li`
     align-items: center;
     cursor: pointer;
     gap: 20px;
-   
+    &:hover {
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
 `
 export const Status = styled.span`
     margin-left: 10px;
