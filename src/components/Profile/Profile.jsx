@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import { StatsList, ProfileImg, StatsItems, Label, Quantity, ProfileName,ProfileInfo } from './ProfileStyled'
 import { Box } from 'components/Box'
-export const Profile = ({user : {username, tag, location, stats, avatar}}) => {
+export const Profile = ({username, tag, location, stats, avatar}) => {
     return <Box m='5px'
         width='250px'
         borderStyle='groove'>

@@ -11,10 +11,11 @@ import { AppContainer } from './AppStyled';
 export const App = () => {
   return (
     <AppContainer>
-    <Profile user = {user} />
-    <Statistics stats = {data} title = {'Upload Stats'}/>
-    <FriendList friends={friends} />
-    <TransactionHistory items = {items} />
+      <Profile username={user.username} tag={user.tag} location={user.location} stats={user.stats} avatar={user.avatar} />
+      <Statistics stats={data} title={'Upload Stats'} />
+      <Statistics stats = {data}/>
+      <FriendList friends={friends} />
+      <TransactionHistory items = {items} />
     </AppContainer>
   );
 };
