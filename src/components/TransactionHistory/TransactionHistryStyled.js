@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const TransactionHistoryTable = styled.table`
     margin:5px;
-   
     width: 50%;
     border: 1px solid #f0f8ff;
     

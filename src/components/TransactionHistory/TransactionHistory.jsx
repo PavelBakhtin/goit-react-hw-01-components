@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types'
-import { Transaction } from "./Transaction"
 import { TransactionHistoryTable } from './TransactionHistryStyled'
 export const TransactionHistory = ({items}) => {
     return (
@@ -13,9 +12,11 @@ export const TransactionHistory = ({items}) => {
   </thead>
   <tbody>
     {
-       items.map(item => (
+       items.map((item) => (
         <tr key={item.id}>
-            <Transaction item = {item}/>
+            <td>{item.type}</td>
+            <td>{item.amount}</td>
+            <td>{item.currency}</td>
         </tr>
        )) 
     }
@@ -27,6 +28,9 @@ TransactionHistory.propTypes = {
     friends: PropTypes.arrayOf(
         PropTypes.shape({
             id: PropTypes.number.isRequired,
+            type: PropTypes.string,
+            amount: PropTypes.number,
+            currency: PropTypes.string,
         })
     )
 }

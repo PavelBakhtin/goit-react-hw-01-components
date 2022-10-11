@@ -5,14 +5,15 @@ var randomColor = require('randomcolor')
 
 export const Statistics = ({title, stats}) => {
 return (
-<Box display="flex" 
-flexDirection='column'       
-alignItems='center'
-justifyContent='center'
-m='5px'
+    <Box 
+        display="flex" 
+        flexDirection='column'       
+        alignItems='center'
+        justifyContent='center'
+        m='5px'
  >
-<Title>{title}</Title>
-<StatList>
+    {title && <Title>{title}</Title>}
+    <StatList>
     {stats.map ( (item) => 
     (<Box 
         width='50px'
@@ -28,7 +29,7 @@ m='5px'
         <Percentage>{item.percentage}</Percentage>
      </Box>))}
 </StatList>
-</Box>)
+    </Box>)
 }
 
 Statistics.propTypes = {
